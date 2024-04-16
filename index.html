@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rails Schema to Documentation Table</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body style="margin: 10px">
+    <div id="input">
+      <label for="schema-input" style="display: block; margin-bottom: 10px"
+        >Schema Content</label
+      >
+      <textarea
+        name="schema-input"
+        id="schema-input"
+        cols="80"
+        rows="10"
+        placeholder="copy schema.rb file here"
+        style="width: auto; max-height: 500px"
+      ></textarea>
+    </div>
+    <div>
+      <button type="button" id="raw-button" style="margin: 10px 5px">
+        Raw
+      </button>
+      <button type="button" id="schema-button" style="margin: 10px 5px">
+        Schema
+      </button>
+    </div>
+    <div class="output-container">
+      <div class="output">
+        <pre id="raw-output"></pre>
+        <pre id="schema-output"></pre>
+      </div>
+      <div>
+        <div id="navlinks" class="dock-right"></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pluralize/8.0.0/pluralize.min.js"></script>
+    <script src="./helper.js"></script>
+    <script src="./token_parser.js"></script>
+    <script src="./schema_parser.js"></script>
+    <script src="./view_helper.js"></script>
+    <script src="./application.js"></script>
+  </body>
+</html>
